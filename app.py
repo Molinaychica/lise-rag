@@ -112,8 +112,8 @@ def build_prompt(user_q, hits):
     return f"{rules}\n\nContexto:\n{context}\n\nPregunta: {user_q}\nRespuesta (en español, breve y precisa):"
 
 # --- UI ---
-st.set_page_config(page_title="Lise (RAG por PDFs)", page_icon="📚")
-st.title("📚 Lise – Chat con tus PDFs")
+st.set_page_config(page_title="LiseChat", page_icon="🤖")
+st.title("LiseChat")
 
 # Quick status cards
 col1, col2 = st.columns(2)
@@ -165,7 +165,7 @@ else:
         with st.chat_message(role):
             st.markdown(text)
 
-    q = st.chat_input("Preguntá sobre los reglamentos…")
+    q = st.chat_input("Escribí tu pregunta…")
     if q:
         with st.chat_message("user"):
             st.markdown(q)
